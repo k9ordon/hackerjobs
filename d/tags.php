@@ -12,5 +12,6 @@ $tags = array(
 	'css3',
 	'design',
 	'interface design',
-	'c++'
+	'c++',
+	'node.js'
 );

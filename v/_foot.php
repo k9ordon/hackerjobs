@@ -1,11 +1,13 @@
 <? if(!$isAjax) : ?>
 </div>
 <div id="loader"></div>
-<script src="a/j/spin.min.js"></script>
-<script src="a/j/index.js"></script>
-<script src="a/j/jobs.js"></script>
-<script src="a/j/job.js"></script>
-<script src="a/j/page.js"></script>
+
+<script>
+	<? foreach(array("a/j/spin.min.js", "a/j/index.js", "a/j/jobs.js", "a/j/job.js", "a/j/page.js") as $s) : ?>
+		<?= file_get_contents($s) . "\n"; ?>
+	<? endforeach; ?>
+</script>
+
 </body>
 </html>
 <? endif; ?>

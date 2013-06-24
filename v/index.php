@@ -30,6 +30,9 @@
 			</li>
 		<? endforeach; ?>
 		</ul>
+		<div class="links">
+			/<a href="https://github.com/k9ordon/hackerjobs">hackerjobsat</a>
+		</div>
 		<form id="indexForm" action="<?=$config['base'];?>/jobs">
 			/<input name="tag" value="" placeholder="..." autocomplete='off'>
 			<button type="submit">YOLO</button>

@@ -1,0 +1,69 @@
+#job {
+	z-index: 200;
+	background: #f7f7f7;
+	color: gray;
+
+	position: absolute;
+	bottom:10%;
+	left:50%;
+
+	margin:0 0 0 -500px;
+	padding:24px;
+
+	width:1000px;
+	height: 80%;
+
+	overflow: hidden;
+	overflow-y: scroll;
+
+	border-top: 5px solid red;
+	box-shadow: 0 0px 10px #000,0 6px 20px #000;
+
+	iframe {
+		left:40px;
+		width: 1024px;
+		height: 1200px;
+		-webkit-transform: scale(0.4);
+		-webkit-transform-origin: top left;
+		border: 1px solid black;
+		background: white;
+		position: absolute;
+		top:0;
+		overflow: hidden;
+	}
+
+	h1 {
+		margin-bottom: 10px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	h2 {
+		font-size: 18px;
+		b {
+			font-weight: bold;
+		}
+	}
+
+	.col6:nth-child(2n) {
+		padding-top: 490px;
+		padding-left: 40px;
+
+		p {
+			font-size: 14px;
+		}
+	}
+
+	p.jobtext {
+		font-size: 14px;
+		margin-top: 20px;
+		line-height: 18px;
+	}
+
+	-webkit-transform: translate(0,100%);
+
+	&.shown {
+		-webkit-transform: translate(0,0);
+	}
+}

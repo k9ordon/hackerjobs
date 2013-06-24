@@ -1,0 +1,153 @@
+@import "reset";
+@import "icons";
+@import "base";
+@import "index";
+@import "jobs";
+@import "job";
+@import "animation";
+@import "wack";
+
+body, input, button {
+	font-family: 
+		"HelveticaNeue-Light", 
+		"Helvetica Neue Light",
+         "Helvetica Neue", sans-serif;
+	font-weight: 300;
+	font-size: 24px;
+}
+
+body {
+	background: black;
+}
+
+.page {
+	height: 100%;
+	width:100%;
+	
+	padding: 10%;
+
+	border:1px solid gray;
+	overflow: scroll;
+
+	position: absolute;
+	top:0;
+	left:0;
+
+	transform-style: preserve-3d;
+
+	&.loading {
+		border:1px solid red;
+	}
+
+	&.hidden {
+		opacity: 0;
+	}
+}
+
+a {
+	color:gray;
+}
+
+.logoWrap {
+	/*border-radius: 360px;
+	height: 200px;
+	width: 200px;
+	background: black;*/
+	//text-align: center;
+	white-space: nowrap;
+
+	a {
+		font-size: 28px;
+		text-decoration: none;
+		position: relative;
+		b {
+			font-weight: bold;
+		}
+	}
+
+	.logosub {
+		margin-top:5px;
+		font-size: 16px;
+		margin-left: 37px;
+	}
+
+}
+
+.loactionWrap {
+	margin-top: 52px;
+	margin-left: 7px;
+	position: relative;
+
+	span {
+		position: absolute;
+	}
+
+	input {
+		font-size: 16px;
+		background: none;
+		border:none;
+		width: 100%;
+		padding: 5px;
+		padding-left: 26px;
+		max-width: 200px;
+		outline:none;
+	}
+
+	span.icon-location {
+		top: 4px;
+		left:0;
+	}
+	span.spinner {
+		right:auto;
+		left: 16px;
+		top: 13px;
+	}
+
+	.spinnerText {
+		display: none;
+		font-size: 16px;
+		padding: 5px 0 0 30px;
+	}
+
+	&.loading {
+		.spinnerText {
+			display: block;
+		}
+		input, span.icon-location {
+			display: none;
+		}
+	}
+
+	&:hover, &:focus {
+		input {
+			background: white;
+			color: black!important;
+			border-radius: 6px;
+			text-shadow:none!important;
+		}
+	}
+}
+
+#loader {
+	position: fixed;
+	z-index: 200;
+	height: 160px;
+	width: 200px;
+	top:50%; left:50%;
+	margin:-80px 0 0 -100px;
+	background: rgba(0,0,0,0.7);
+	border-radius: 5px;
+
+	display: none;
+
+	.spinner {
+		left: 100px!important;
+		top: 80px!important;
+	}
+}
+
+.loading {
+	#loader {
+		display: block;
+	}
+}

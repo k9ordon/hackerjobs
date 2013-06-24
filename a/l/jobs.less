@@ -1,0 +1,101 @@
+@color: #323232;
+
+#jobs {
+	z-index: 100;
+	background: @color;
+	color: white;
+	//background: url(../i/bg1.png);
+	//background-size: 600px 385px;
+
+	* {
+		text-shadow:1px 1px 1px #000;
+	}
+
+	input, a {
+		color: white;
+	}
+
+	.col4 {
+		position: fixed;
+
+		.logoWrap b {
+			background: white;
+			color:@color;
+			padding:0px 5px 2px;
+		}
+
+		.tagWrap {
+			margin-left: 37px;
+
+			b {
+				font-weight: bold;
+			}
+		}
+
+		.tagList {
+			margin-top:50px;
+			margin-left:37px;
+			li {
+				margin-bottom:5px;
+				font-size: 16px;
+				cursor: pointer;
+				span {
+					pointer-events:none;
+				}
+				&:hover {
+					span {
+						background: rgba(0,0,0,0.1);
+					}
+				}
+			}
+		}
+	}
+
+	.col8 {
+		margin-left:33.33333334%;
+
+		.jobsList {
+			li {
+				margin-bottom:24px;
+				* {
+					pointer-events:none;
+				}
+				h3 {
+					//font-size: 18px;
+					text-transform: lowercase;
+					margin-bottom: 5px;
+					display: inline-block;
+				}
+				p {
+					font-size: 16px;
+					text-transform: lowercase;
+
+					b {
+						font-weight: bold;
+					}
+				}
+				&:hover {
+					cursor:pointer;
+					h3 {
+						background: rgba(0,0,0,0.1)
+					}
+				}
+			}
+		}
+
+		button.loadMore {
+			background: transparent;
+			border: 1px solid white;
+			color:white;
+			width: 100%;
+			margin-top: 40px;
+			cursor: pointer;
+
+			&:hover {
+				background: white;
+				color:black;
+				text-shadow: 1px 1px 1px #CCC;
+			}
+		}
+	}
+}

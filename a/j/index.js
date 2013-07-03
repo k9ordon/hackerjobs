@@ -89,8 +89,8 @@ indexModule.prototype.showJobs = function(markup) {
 	document.body.classList.remove('loading');
 
 	setTimeout(function() {
-		instance.$indexPage.classList.add('slideOut');
 		instance.$indexPage.classList.remove('bg');
+		instance.$indexPage.classList.add('slideOut');
 		var removeSlide = function() {
 			instance.$indexPage.classList.add('hidden');
 			instance.$indexPage.classList.remove('slideOut');

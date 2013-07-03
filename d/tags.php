@@ -13,5 +13,11 @@ $tags = array(
 	'design',
 	'interface design',
 	'c++',
-	'node.js'
+	'node.js',
+	'objective-c',
+	'perl',
+	'python',
+	'ruby',
+	'scala',
+	'jquery'
 );

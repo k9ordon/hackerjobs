@@ -1,5 +1,5 @@
 <?
-$config['base'] = "http://duro/hackerjobs";
+$config['base'] = "http://hackerjobs.k94n.com";
 
 // get your api key at http://www.karriere.at/api/docs
 $config['apiKey'] = file_get_contents('d/apikey');

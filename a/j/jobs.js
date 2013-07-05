@@ -84,7 +84,9 @@ jobsModule.prototype.openTag = function(tag) {
 	this.jobsXhr.onreadystatechange = function() {
 		console.log([instance.jobsXhr.readyState, instance.jobsXhr.status]);
 		if (instance.jobsXhr.readyState==4 && instance.jobsXhr.status==200) {
-			instance.onTagReady(instance.jobsXhr.responseText);
+			setTimeout(function() {
+				instance.onTagReady(instance.jobsXhr.responseText);
+			}, 1000);
 		}
 	}
 	this.jobsXhr.open('POST', 'jobs?ajax&tag=' + tag + '&location=' + locationString, true);

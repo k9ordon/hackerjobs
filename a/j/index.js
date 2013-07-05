@@ -67,7 +67,9 @@ indexModule.prototype.loadTag = function(tag) {
 	this.jobsXhr.onreadystatechange = function() {
 		console.log([instance.jobsXhr]);
 		if (instance.jobsXhr.readyState==4 && instance.jobsXhr.status==200) {
-			instance.showJobs(instance.jobsXhr.responseText);
+			setTimeout(function() {
+				instance.showJobs(instance.jobsXhr.responseText);
+			}, 1000);
 		}
 	}
 	this.jobsXhr.open('GET', 'jobs?ajax&tag=' + tag + '&location=' + locationString, true);
@@ -89,22 +91,22 @@ indexModule.prototype.showJobs = function(markup) {
 	document.body.classList.remove('loading');
 
 	setTimeout(function() {
-		instance.$indexPage.classList.remove('bg');
-		instance.$indexPage.classList.add('slideOut');
-		var removeSlide = function() {
+		var removeSlideOut = function() {
 			instance.$indexPage.classList.add('hidden');
 			instance.$indexPage.classList.remove('slideOut');
 			instance.$indexPage.removeEventListener("webkitAnimationEnd", removeSlide);
 		}
-		instance.$indexPage.addEventListener("webkitAnimationEnd", removeSlide, false);
+		instance.$indexPage.addEventListener("webkitAnimationEnd", removeSlideOut, false);
+		instance.$indexPage.classList.add('slideOut');
+		instance.$indexPage.classList.remove('bg');
 
-		instance.$jobsPage.classList.add('slideIn');
-		instance.$jobsPage.classList.remove('hidden');
 		var removeSlideIn = function() {
 			instance.$jobsPage.classList.remove('slideIn');
 			instance.$jobsPage.removeEventListener("webkitAnimationEnd", removeSlideIn);
 		}
 		instance.$jobsPage.addEventListener("webkitAnimationEnd", removeSlideIn, false);
+		instance.$jobsPage.classList.add('slideIn');
+		instance.$jobsPage.classList.remove('hidden');
 	}, 1);
 
 	var j = new jobsModule(); 

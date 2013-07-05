@@ -366,21 +366,21 @@ body {
 }
 @-webkit-keyframes pageSlideOut {
   0% {
+    -webkit-transform: scale(0.95) rotateX(1deg);
     opacity: 1;
-    -webkit-transform: scale(0.95) /* translate(0,0) */ rotateX(0deg);
   }
   100% {
+    -webkit-transform: scale(1) rotateX(180deg);
     opacity: 1;
-    -webkit-transform: scale(1) rotateX(-180deg);
   }
 }
 @-webkit-keyframes pageSlideIn {
   0% {
-    -webkit-transform: /*translate(0,60%) scale(1.5)*/ rotateX(180deg);
+    -webkit-transform: rotateX(-179deg);
     opacity: 1;
   }
   100% {
-    -webkit-transform: /*translate(0,0) scale(1)*/ rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
     opacity: 1;
   }
 }
@@ -486,7 +486,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 .page.loading {
   border: 1px solid red;

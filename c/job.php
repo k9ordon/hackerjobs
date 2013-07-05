@@ -15,9 +15,9 @@ class jobC extends c {
 		$apiUrl = sprintf($this->config['apiUrl'], 'job/detail', 'id='.$id);
 
 		//sleep(1);
-		$r = $this->config['fakeJob']; // cache read
+		//$r = $this->config['fakeJob']; // cache read
 		//die(base64_encode(file_get_contents($apiUrl))); // cache write
-		//$r = unserialize(file_get_contents($apiUrl)); // live
+		$r = unserialize(file_get_contents($apiUrl)); // live
 
 		$this->v['job'] = $r['data'];
 	}
